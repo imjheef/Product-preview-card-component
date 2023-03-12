@@ -23,7 +23,11 @@ main{
     color: var(--dark-grayish-blue);
 }
 
-
+section {
+    display: flex;
+    flex-direction: row;
+    height: 30rem;
+}
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
 
