@@ -1,4 +1,3 @@
-/* Reset */
 :root{
     --montserrat-font:'Montserrat', sans-serif;
     --fraunces-font: 'Fraunces', serif;
@@ -10,6 +9,7 @@
     --white: hsl(0, 0%, 100%)
 }
 
+/* Reset */
 
 * {
     font-family: var(--montserrat-font);
@@ -17,10 +17,12 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -31,55 +33,65 @@ main{
 
 section {
     display: flex;
-    width: 52rem;
+    /* width: 52rem; */
     align-items: center;
 }
 
+
 .product--title {
-    font-family: var(--fraunces-font);
-    font-size: 2rem;
-    color: var(--very-dark-blue);
-    padding: 1rem;
-    width: 15rem;
+  font-family: var(--fraunces-font);
+  color: var(--very-dark-blue);
+  font-size: 2.2rem;
+  line-height: 1.1;
+  width: 14rem;
+
 }
 
+.perfume  {
+  letter-spacing: 0.5rem;
+}
+
+.product__container   {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;  
+  }
 .product--description   {
-    width: 15rem;
-    padding: 1rem;
+    width: 21rem;
+    line-height: 1.7rem;
 }
 
 img {
-    width: 24rem;
-    padding-right: 1rem;
+    width: 23rem;
     border-start-start-radius: 1rem;
     border-end-start-radius: 1rem;
 }
 
 .container  {
-    background-color: var(--white);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    background-color: var(--white);
     border-radius: 1rem;
-    width: 45rem;
+    width: 44rem;
     height: 34.5rem;
     object-fit: cover;
 }
 
-.container--information   {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--white);
-    width: 30rem;
-    height: 34.5rem;
-    border-radius: 1rem;
+.product--title, 
+.perfume, 
+.product--description,
+.container__prices  {
+  margin-left: 2rem;
 }
 
-.container--prices   {
+/* PRICES */
+
+.container__prices   {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    padding: 1rem 2rem;
+    /* padding: 1rem; */
 }
 
 .discounted--price   {
@@ -90,16 +102,17 @@ img {
 
 .total--price   {
     text-decoration-line: line-through;
+    
 }
 
 button  {
     color: var(--white);
     background-color: var(--dark-cyan);
     border-radius: .5rem;
-    padding: 1rem;
+    padding: 1rem 5rem;
     border-style: none;
-    margin: 2rem;
-    outline: solid 2px red;
+    margin: 1rem 2rem;
+    cursor: pointer;
 }
 
 button:hover    {
@@ -109,8 +122,9 @@ button:hover    {
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
 
 .attribution    {
-font-size: 11px;
-text-align: center; 
+    margin-top: 3rem;
+    font-size: 1rem;
+    text-align: center; 
 }
 
 .attribution a  { 
