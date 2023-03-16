@@ -11,13 +11,16 @@
 
 /* Reset */
 
+html  {
+  /* background-color: var(--white-cream); */
+}
+
 * {
     font-family: var(--montserrat-font);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 14px;
-    flex-wrap: wrap;
 }
 
 main{
@@ -33,10 +36,20 @@ main{
 
 section {
     display: flex;
-    /* width: 52rem; */
     align-items: center;
 }
 
+
+.img__perfume {
+  width: 313px;
+  object-fit: contain;
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
+}
+
+.cart__img  {
+  margin-right: 1rem;
+}
 
 .product--title {
   font-family: var(--fraunces-font);
@@ -44,45 +57,41 @@ section {
   font-size: 2.2rem;
   line-height: 1.1;
   width: 14rem;
-
 }
 
 .perfume  {
+  margin-top: 2rem;
   letter-spacing: 0.5rem;
 }
+
+.button__cart{
+  display: flex;
+}
+
 
 .product__container   {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;  
   }
-.product--description   {
-    width: 21rem;
-    line-height: 1.7rem;
-}
 
-img {
-    width: 23rem;
-    border-start-start-radius: 1rem;
-    border-end-start-radius: 1rem;
+.product--description   {
+    width: 17rem;
+    line-height: 1.7rem;
 }
 
 .container  {
     display: flex;
     flex-direction: column;
+    align-content: space-between;
     background-color: var(--white);
     border-radius: 1rem;
     width: 44rem;
-    height: 34.5rem;
+    height: 33.5rem;
     object-fit: cover;
+
 }
 
-.product--title, 
-.perfume, 
-.product--description,
-.container__prices  {
-  margin-left: 2rem;
-}
 
 /* PRICES */
 
@@ -90,8 +99,8 @@ img {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: start;
     gap: 1rem;
-    /* padding: 1rem; */
 }
 
 .discounted--price   {
@@ -102,7 +111,6 @@ img {
 
 .total--price   {
     text-decoration-line: line-through;
-    
 }
 
 button  {
@@ -111,15 +119,15 @@ button  {
     border-radius: .5rem;
     padding: 1rem 5rem;
     border-style: none;
-    margin: 1rem 2rem;
+    margin: 2rem 2rem;
     cursor: pointer;
+    /* gap: 1rem; */
 }
 
 button:hover    {
     background-color: var(--dark-cyan-active);
 }
 
-/* Feel free to remove these styles or customise in your own stylesheet 👍 */
 
 .attribution    {
     margin-top: 3rem;
@@ -131,3 +139,12 @@ button:hover    {
     color: hsl(228, 45%, 44%); 
 }
 
+
+@media (width: 375px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+}
