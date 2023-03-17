@@ -11,16 +11,13 @@
 
 /* Reset */
 
-html  {
-  /* background-color: var(--white-cream); */
-}
-
 * {
     font-family: var(--montserrat-font);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 14px;
+    flex-wrap: wrap;
 }
 
 main{
@@ -86,12 +83,18 @@ section {
     align-content: space-between;
     background-color: var(--white);
     border-radius: 1rem;
-    width: 44rem;
+    width: 46rem;
     height: 33.5rem;
     object-fit: cover;
 
 }
 
+/* .product--title, 
+.perfume, 
+.product--description,
+.container__prices  {
+  margin-left: 2rem;
+} */
 
 /* PRICES */
 
@@ -139,12 +142,3 @@ button:hover    {
     color: hsl(228, 45%, 44%); 
 }
 
-
-@media (width: 375px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  
-}
