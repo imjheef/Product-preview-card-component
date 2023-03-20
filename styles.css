@@ -173,16 +173,10 @@ button:active {
         width: 21rem;
     }
 
+    .button__cart, 
+    .product--description, 
     .product--title {
-        width: auto;
-    }
-
-    .product--description   {
-        width: auto;
-    }
-
-    .button__cart  {
-        width: auto;
+      width: auto;
     }
 
     button  {
